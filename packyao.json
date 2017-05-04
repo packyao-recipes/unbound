@@ -1,0 +1,30 @@
+{
+  "name": "unbound",
+  "version": "1.6.2",
+  "license": "BSD",
+  "commands": [
+    "yum install -y wget gcc openssl-devel expat-devel python-devel swig libevent-devel\nwget https://unbound.net/downloads/unbound-1.6.2.tar.gz\ntar xvfz unbound-1.6.2.tar.gz\ncd unbound-1.6.2\n./configure --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc --datadir=/usr/share --includedir=/usr/include --libdir=/usr/lib64 --libexecdir=/usr/libexec --localstatedir=/var --sharedstatedir=/var/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-ldns= --with-libevent --with-pthreads --with-ssl --disable-rpath --disable-static --with-conf-file=/etc/unbound/unbound.conf --with-pidfile=/var/run/unbound/unbound.pid --with-pythonmodule --with-pyunbound --enable-sha2 --disable-gost --enable-ecdsa --with-rootkey-file=/var/lib/unbound/root.key\nmake && make install\n"
+  ],
+  "depends": [
+
+  ],
+  "cwd": "",
+  "env": {
+  },
+  "outputs": [
+    "deb",
+    "rpm"
+  ],
+  "package_files": {
+    "/etc/unbound": "/etc/unbound",
+    "/usr/sbin/unbound": "/usr/sbin/unbound",
+    "/usr/sbin/unbound-anchor": "/usr/sbin/unbound-anchor",
+    "/usr/sbin/unbound-checkconf": "/usr/sbin/unbound-checkconf",
+    "/usr/sbin/unbound-control": "/usr/sbin/unbound-control",
+    "/usr/sbin/unbound-control-setup": "/usr/sbin/unbound-control-setup",
+    "/usr/sbin/unbound-host": "/usr/sbin/unbound-host",
+    "/usr/sbin/unbound-streamtcp": "/usr/sbin/unbound-streamtcp"
+  },
+  "build_distro": "centos",
+  "build_distro_version": "7"
+}
