@@ -8,7 +8,7 @@ a['version'] = version
 a['license'] = 'BSD'
 a['commands'] = [
   <<~EOF
-  yum install -y wget gcc openssl-devel expat-devel python-devel swig libevent-devel
+  yum install -y wget gcc make openssl-devel expat-devel python-devel swig libevent-devel
   wget https://unbound.net/downloads/unbound-#{version}.tar.gz
   tar xvfz unbound-#{version}.tar.gz
   cd unbound-#{version}
