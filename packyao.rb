@@ -28,7 +28,6 @@ a['package_files'] = {
   '/usr/sbin/unbound-control' => '/usr/sbin/unbound-control',
   '/usr/sbin/unbound-control-setup' => '/usr/sbin/unbound-control-setup',
   '/usr/sbin/unbound-host' => '/usr/sbin/unbound-host',
-  '/usr/sbin/unbound-streamtcp' => '/usr/sbin/unbound-streamtcp',
 }
 a['build_distro'] = 'centos'
 a['build_distro_version'] = '7'
