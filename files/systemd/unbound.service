@@ -1,0 +1,15 @@
+[Unit]
+Description=Unbound is a validating, recursive, and caching DNS resolver.
+After=network.target networking.service
+
+[Service]
+Type=simple
+ExecStartPre=/usr/sbin/unbound-checkconf
+ExecStartPre=-/usr/sbin/unbound-anchor
+ExecStart=/usr/sbin/unbound -d
+ExecReload=/bin/kill -HUP $MAINPID
+LimitNOFILE=102400
+LimitNPROC=65535
+
+[Install]
+WantedBy=multi-user.target

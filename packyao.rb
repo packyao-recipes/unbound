@@ -20,7 +20,11 @@ a['depends'] = []
 a['cwd'] = ''
 a['env'] = {}
 a['outputs'] = %w(deb rpm)
+a['scripts'] = {
+  'after-install' => 'files/after-install.sh',
+}
 a['package_files'] = {
+  '/tmp/files' => '/tmp/unbound',
   '/etc/unbound' => '/etc/unbound',
   '/usr/sbin/unbound' => '/usr/sbin/unbound',
   '/usr/sbin/unbound-anchor' => '/usr/sbin/unbound-anchor',

@@ -15,7 +15,11 @@
     "deb",
     "rpm"
   ],
+  "scripts": {
+    "after-install": "files/after-install.sh"
+  },
   "package_files": {
+    "/tmp/files": "/tmp/unbound",
     "/etc/unbound": "/etc/unbound",
     "/usr/sbin/unbound": "/usr/sbin/unbound",
     "/usr/sbin/unbound-anchor": "/usr/sbin/unbound-anchor",
