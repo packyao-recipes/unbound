@@ -11,6 +11,10 @@ chown unbound:unbound /var/run/unbound
 # create control keys
 unbound-control-setup
 
+# create directory for root.key
+mkdir -v /var/lib/unbound
+
+# install startup script
 if pidof systemd; then
     mv -v /tmp/unbound/scripts/systemd/unbound.service /usr/lib/systemd/system/unbound.service
     echo "D /var/run/unbound 0755 unbound unbound -" > /usr/lib/tmpfiles.d/unbound.conf
