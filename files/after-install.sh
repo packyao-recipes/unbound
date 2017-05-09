@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 
 getent passwd unbound >/dev/null || \
-    useradd -r -g unbound -d /etc/unbound -s /sbin/nologin \
-    -c "Unbound DNS resolver" unbound
+    useradd -r -d /etc/unbound -s /sbin/nologin \
+        -c "Unbound DNS resolver" unbound
+
+# create temp directory (needed before reboot for systemd)
+mkdir -m 0755 -vp /var/run/unbound
+chown unbound:unbound /var/run/unbound
 
 if pidof systemd; then
     mv -v /tmp/unbound/systemd/unbound.service /usr/lib/systemd/system/unbound.service
