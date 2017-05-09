@@ -16,7 +16,7 @@
     "rpm"
   ],
   "scripts": {
-    "after-install": "files/after-install.sh"
+    "after-install": "files/scripts/after-install.sh"
   },
   "package_files": {
     "/tmp/files": "/tmp/unbound",

@@ -23,7 +23,7 @@ a['cwd'] = ''
 a['env'] = {}
 a['outputs'] = %w(deb rpm)
 a['scripts'] = {
-  'after-install' => 'files/after-install.sh',
+  'after-install' => 'files/scripts/after-install.sh',
 }
 a['package_files'] = {
   '/tmp/files' => '/tmp/unbound',
