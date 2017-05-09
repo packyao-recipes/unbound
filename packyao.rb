@@ -32,6 +32,7 @@ a['package_files'] = {
   '/usr/sbin/unbound-control' => '/usr/sbin/unbound-control',
   '/usr/sbin/unbound-control-setup' => '/usr/sbin/unbound-control-setup',
   '/usr/sbin/unbound-host' => '/usr/sbin/unbound-host',
+  '/usr/lib64/libunbound.so*' => '/usr/lib64',
 }
 a['build_distro'] = 'centos'
 a['build_distro_version'] = '7'
