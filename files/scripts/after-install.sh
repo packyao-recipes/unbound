@@ -8,11 +8,11 @@ getent passwd unbound >/dev/null || \
 mkdir -m 0755 -vp /var/run/unbound
 chown unbound:unbound /var/run/unbound
 
-# create control keys
-unbound-control-setup
-
 # create directory for root.key
 mkdir -v /var/lib/unbound
+
+# create control keys
+unbound-control-setup
 
 # install startup script
 if pidof systemd; then
