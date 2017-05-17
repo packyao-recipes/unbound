@@ -9,7 +9,7 @@ mkdir -m 0755 -vp /var/run/unbound
 chown unbound:unbound /var/run/unbound
 
 # create directory for root.key
-mkdir -v /var/lib/unbound
+mkdir -vp /var/lib/unbound
 
 # create control keys
 unbound-control-setup
