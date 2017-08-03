@@ -5,7 +5,7 @@
   "commands": [
     "yum install -y wget gcc make openssl-devel expat-devel python-devel swig libevent-devel\nwget https://unbound.net/downloads/unbound-1.6.4.tar.gz\ntar xvfz unbound-1.6.4.tar.gz\ncd unbound-1.6.4\n./configure --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc --datadir=/usr/share --includedir=/usr/include --libdir=/usr/lib64 --libexecdir=/usr/libexec --localstatedir=/var --sharedstatedir=/var/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-libevent --with-pthreads --with-ssl --disable-rpath --with-conf-file=/etc/unbound/unbound.conf --with-pidfile=/var/run/unbound/unbound.pid --with-pythonmodule --with-pyunbound --enable-sha2 --disable-gost --enable-ecdsa --with-rootkey-file=/var/lib/unbound/root.key\nmake && make install\ncp -v /tmp/files/unbound/unbound.conf /etc/unbound/unbound.conf\nmkdir -vp /etc/unbound/conf.d /etc/unbound/local.d\n"
   ],
-  "depends": [
+  "dependencies": [
     "libevent"
   ],
   "cwd": "",

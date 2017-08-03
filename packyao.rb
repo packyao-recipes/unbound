@@ -18,7 +18,7 @@ a['commands'] = [
   mkdir -vp /etc/unbound/conf.d /etc/unbound/local.d
   EOF
 ]
-a['depends'] = ['libevent']
+a['dependencies'] = ['libevent']
 a['cwd'] = ''
 a['env'] = {}
 a['outputs'] = %w(deb rpm)
